@@ -17,3 +17,16 @@ Passing this string to console.log should show something like this:
 ```
 
 When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+
+
+```js
+let size = 8;
+for (let y = 0; y < size; y++) {
+    let line = ' ';
+
+    for (let x = 0; x < size; x++) {
+        line += (y + x + 1) % 2 ? ' ' : '#';
+    }
+
+    console.log(line);
+}
